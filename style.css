@@ -70,7 +70,7 @@ body, h1, h2, h3, p, ul, li, form, input, textarea {
   }
   
   .project {
-    margin-bottom: 500px;
+    margin-bottom: 300px;
   }
   
   .project img {
@@ -95,7 +95,7 @@ body, h1, h2, h3, p, ul, li, form, input, textarea {
   
   button {
     background-color: #fff;
-    color: #fff;
+    color: black;
     cursor: pointer;
   }
   footer{
@@ -109,8 +109,8 @@ body, h1, h2, h3, p, ul, li, form, input, textarea {
     border-top: 1px solid gray;
   }
   .left img {
-    width: 304px; /* Set the width of the github icon */
-    height: 304px; /* Set the height of the github icon */
+    width: 24px; /* Set the width of the github icon */
+    height: 24px; /* Set the height of the github icon */
     margin-right: 10px; /* Add spacing between the icons */
 }
 

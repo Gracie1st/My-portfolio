@@ -1,39 +1,52 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const links = document.querySelectorAll('a[href^="#"]');
-    for (const link of links) {
-      link.addEventListener("click", scrollToSection);
-    }
-  });
-  
-  function scrollToSection(event) {
-    event.preventDefault();
-    const target = document.querySelector(event.target.getAttribute("href"));
-    const offset = target.getBoundingClientRect().top + window.scrollY;
-    window.scroll({
-      top: offset,
-      behavior: "smooth",
+document.addEventListener('DOMContentLoaded', function () {
+  const navLinks = document.querySelectorAll('nav ul li a');
+
+  navLinks.forEach(link => {
+    link.addEventListener('click', function (event) {
+      event.preventDefault();
+
+      const targetElement = document.querySelector(link.getAttribute('href'));
+      const yOffset = -80; // Adjust this value to control the scroll position after clicking a link
+      const y = targetElement.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+      window.scrollTo({ top: y, behavior: 'smooth' });
     });
-  }
-  
-  // Form submission handling
-  document.addEventListener("DOMContentLoaded", function () {
-    const form = document.getElementById("contact-form");
-    form.addEventListener("submit", handleFormSubmission);
   });
-  
-  function handleFormSubmission(event) {
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+  const contactForm = document.getElementById('contact-form');
+  const submitButton = document.querySelector('#contact-form button');
+
+  contactForm.addEventListener('submit', function (event) {
     event.preventDefault();
-    const form = event.target;
-    const formData = new FormData(form);
-    // Send the form data to the server or handle it as needed
-    // For this example, we'll just log the data to the console
-    for (const entry of formData.entries()) {
-      console.log(entry[0] + ": " + entry[1]);
+
+    const nameInput = document.querySelector('[name="name"]');
+    const emailInput = document.querySelector('[name="email"]');
+    const messageInput = document.querySelector('[name="message"]');
+
+    const nameValue = nameInput.value.trim();
+    const emailValue = emailInput.value.trim();
+    const messageValue = messageInput.value.trim();
+
+    if (nameValue === '' || emailValue === '' || messageValue === '') {
+      alert('Please fill out all fields before submitting the form.');
+      return;
     }
-    // Optionally, you can add a message to show that the form was submitted
-    // For example:
-    // const message = document.createElement("p");
-    // message.textContent = "Form submitted successfully!";
-    // form.appendChild(message);
-    form.reset();
-  }
+
+    nameInput.value = '';
+    emailInput.value = '';
+    messageInput.value = '';
+
+    alert('Form submitted successfully!');
+  });
+});
+
+// Scroll-to-top button
+document.addEventListener('DOMContentLoaded', function () {
+  const scrollButton = document.querySelector('.scroll-to-top');
+
+  scrollButton.addEventListener('click', function () {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+});

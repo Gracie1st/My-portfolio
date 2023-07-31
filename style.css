@@ -1,0 +1,117 @@
+body, h1, h2, h3, p, ul, li, form, input, textarea {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+  }
+  
+  header {
+    background-color: rgb(223, 69, 13);
+    color: #fff;
+    padding: auto;
+  }
+  header h1{
+    padding: 0%;
+    margin: 0;
+  }
+  header img{
+    width: 100px;
+    height: auto;
+    margin-right: 10px;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-color: black;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+  }
+  
+  nav ul li {
+    margin-right: 20px;
+  }
+  
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  section {
+    padding: 40px;
+  }
+  
+  #hero {
+    background-image: url('hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #hero .hero-content {
+    text-align: center;
+  }
+  
+  .container {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .project {
+    margin-bottom: 500px;
+  }
+  
+  .project img {
+    width: 50%;
+    max-height: 100%;
+    object-fit: cover;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  form input,
+  form textarea,
+  form button {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  button {
+    background-color: #fff;
+    color: #fff;
+    cursor: pointer;
+  }
+  footer{
+    background-color: rgb(223, 69, 13);
+  }
+  .footer_bottom{
+    
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid gray;
+  }
+  .footer_bottom{
+    .left a{
+      width:24px;
+      height:24px;
+    }
+  }
+  

@@ -108,10 +108,13 @@ body, h1, h2, h3, p, ul, li, form, input, textarea {
     justify-content: space-between;
     border-top: 1px solid gray;
   }
-  .footer_bottom{
-    .left a{
-      width:24px;
-      height:24px;
-    }
-  }
-  
+  .left img {
+    width: 304px; /* Set the width of the github icon */
+    height: 304px; /* Set the height of the github icon */
+    margin-right: 10px; /* Add spacing between the icons */
+}
+
+.left img:last-child {
+    width: 28px; /* Set the width of the behance icon */
+    height: 28px; /* Set the height of the behance icon */
+}

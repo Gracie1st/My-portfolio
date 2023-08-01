@@ -65,7 +65,7 @@ section {
 #hero .hero-content {
   text-align: center;
 }
-hero-content img {
+.hero-content img {
   width: 40px; 
   height: auto;
   margin-bottom: 20px;

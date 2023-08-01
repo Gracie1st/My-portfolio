@@ -61,13 +61,15 @@ section {
   align-items: center;
   justify-content: center;
 }
-#hero .img{
-  height: 200px;
-}
+
 #hero .hero-content {
   text-align: center;
 }
-
+hero-content img {
+  width: 100px; 
+  height: auto;
+  margin-bottom: 20px;
+}
 .container {
   max-width: 1000px;
   margin: 0 auto;

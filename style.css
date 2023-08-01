@@ -53,7 +53,7 @@ section {
 }
 
 #hero {
-  background-image: url('hero-bg.jpg');
+  background-image: url('hero-bg.png');
   background-size: cover;
   background-position: center;
   height: 400px;
@@ -61,7 +61,9 @@ section {
   align-items: center;
   justify-content: center;
 }
-
+#hero .hero-img{
+  height: 200px;
+}
 #hero .hero-content {
   text-align: center;
 }

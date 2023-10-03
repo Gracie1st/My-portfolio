@@ -60,7 +60,6 @@ section {
   background-image: url('hero-bg.png');
   background-size: cover;
   background-position: center;
-  height: 40%;
   display: flex;
   align-items: center;
   justify-content: center;
